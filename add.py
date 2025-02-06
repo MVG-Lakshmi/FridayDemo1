@@ -1,6 +1,7 @@
 def sum_of_natural_numbers(n):
-    return n * (n + 1) // 2  # Use integer division
-
+    if n == 1:
+        return 1
+    return n + sum_of_natural_numbers(n - 1)
 # Example usage:
 n = 5
 result = sum_of_natural_numbers(n)
